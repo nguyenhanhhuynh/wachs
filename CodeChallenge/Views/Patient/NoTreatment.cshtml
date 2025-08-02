@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model CodeChallenge.ViewModels.SearchPatient;
+
+@{
+    ViewData["Title"] = "Patients No Treatment";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model != null && Model.PatientNames != null)
+{
+    <ul>
+        @foreach (var item in Model.PatientNames)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
